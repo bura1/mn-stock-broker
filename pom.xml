@@ -211,6 +211,8 @@
             <arg>-Amicronaut.processing.group=com.danielprinz.udemy</arg>
             <arg>-Amicronaut.processing.module=mn-stock-broker</arg>
           </compilerArgs>
+          <source>11</source>
+          <target>11</target>
         </configuration>
         <executions>
           <execution>

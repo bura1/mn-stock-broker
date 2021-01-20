@@ -24,7 +24,7 @@ public class QuotesController {
     public HttpResponse getQuote(@PathVariable String symbol) {
         final Optional<Quote> maybeQuote = store.fetchQuote(symbol);
 
-        if (maybeQuote.isEmpty()) {
+        if (!maybeQuote.isPresent()) {
             final CustomError notFound = CustomError.builder()
                     .status(HttpStatus.NOT_FOUND.getCode())
                     .error(HttpStatus.NOT_FOUND.name())
